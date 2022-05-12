@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du film</title>
+</head>
+<body>
+    <p>
+        Titre : <span th:text="${movie.title}"/>
+    </p>
+    <p>
+        Genre : <span th:text="${movie.genre}"/>
+    </p>
+    <p>
+        Description : <span th:text="${movie.description}"/>
+    </p>
+</body>
+</html>
