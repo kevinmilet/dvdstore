@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DVDStore</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
     <h1>DVDStore : La boutique de DVD en ligne</h1>
     <p>
         <a href="add-movie-form">Ajouter un film</a>
     </p>
-    <table border="1">
-        <tr th:each="movie: ${movies}">
-            <td>
-                <a th:href="@{/movie/{id}(id=${movie.id})}" th:text="${movie.title}"/>
-            </td>
-            <td th:text="${movie.genre}"></td>
-        </tr>
-    </table>
+    <section class="container">
+        <div class="left-half">
+            <article id="movie-list">
+
+            </article>
+        </div>
+        <div class="right-half">
+            <article id="movie-detail">
+
+            </article>
+        </div>
+    </section>
+    <script th:src="@{/js/script.js}"></script>
 </body>
 </html>

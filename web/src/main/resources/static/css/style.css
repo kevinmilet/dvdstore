@@ -1,0 +1,25 @@
+article {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+}
+
+.container {
+  display: table;
+  width: 100%;
+}
+
+.left-half {
+
+  position: absolute;
+  left: 0;
+  width: 50%;
+}
+
+.right-half {
+
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+

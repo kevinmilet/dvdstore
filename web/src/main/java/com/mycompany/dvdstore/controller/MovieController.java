@@ -37,16 +37,16 @@ public class MovieController {
 //        return "movie-details";
 //    }
 
-//    @PostMapping
-//    public String addMovie(@Valid @ModelAttribute MovieForm movieForm, BindingResult results) {
-//        if (results.hasErrors()) {
-//            return "add-movie-form";
-//        }
-//        Movie movie = new Movie();
-//        movie.setTitle(movieForm.getTitle());
-//        movie.setGenre(movieForm.getGenre());
-//        movie.setDescription(movieForm.getDescription());
-//        movieService.registerMovie(movie);
-//        return "movie-added";
-//    }
+    @PostMapping("/add")
+    public String addMovie(@Valid @ModelAttribute MovieForm movieForm, BindingResult results) {
+        if (results.hasErrors()) {
+            return "add-movie-form";
+        }
+        Movie movie = new Movie();
+        movie.setTitle(movieForm.getTitle());
+        movie.setGenre(movieForm.getGenre());
+        movie.setDescription(movieForm.getDescription());
+        movieService.registerMovie(movie);
+        return "movie-added";
+    }
 }
