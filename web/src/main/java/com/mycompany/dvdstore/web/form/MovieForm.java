@@ -1,4 +1,4 @@
-package com.mycompany.dvdstore.form;
+package com.mycompany.dvdstore.web.form;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package com.mycompany.dvdstore.controller;
+package com.mycompany.dvdstore.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

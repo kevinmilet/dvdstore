@@ -1,10 +1,15 @@
 package com.mycompany.dvdstore.entity;
 
-/**
- * @author k.milet
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Movie {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String genre;
@@ -17,12 +22,6 @@ public class Movie {
         this.description = description;
     }
 
-    public Movie(String title, String genre, String description) {
-        this.title = title;
-        this.genre = genre;
-        this.description = description;
-    }
-
     public Movie(Long id, String title, String genre) {
         this.id = id;
         this.title = title;
@@ -30,17 +29,10 @@ public class Movie {
     }
 
     public Movie() {
+
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
@@ -54,6 +46,14 @@ public class Movie {
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDescription() {
