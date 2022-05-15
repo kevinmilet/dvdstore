@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author k.milet
  */
-@Repository
+//@Repository
 public class FileMovieRepository implements MovieRepositoryInterface {
 
     @Value("${movies.file.location}")
