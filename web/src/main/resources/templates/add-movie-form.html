@@ -40,6 +40,21 @@
         </p>
         <p>
             <label>
+                Firstname
+                <input type="text" th:field="*{firstName}">
+            </label>
+        <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+        </p>
+        <p>
+            <label>
+                Lastname
+                <input type="text" th:field="*{lastName}">
+            </label>
+        <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+        </p>
+
+        <p>
+            <label>
                 Description
                 <textarea th:field="*{description}"></textarea>
             </label>
